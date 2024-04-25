@@ -10,6 +10,7 @@ import Header from './components/Roots/Header.jsx';
 import Error from './components/error/Error.jsx';
 import Home from './components/Roots/Home.jsx';
 import Authprovider from './components/provider/Authprovider.jsx';
+import Login from './components/form/Login.jsx';
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
         path:'/',
         element:<Home></Home>,
         loader: ()=>fetch('http://localhost:5006/item')
+      },
+      {
+        path:'/login',
+        element: <Login></Login>
       }
     ]
   },
