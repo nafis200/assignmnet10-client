@@ -57,12 +57,12 @@ const Navbar = () => {
 
       <li className="lg:ml-4 p-2">
         <NavLink
-          to="/update"
+          to="/tourist-spot"
           className={({ isActive, isPending }) =>
             isActive ? "bg-green-400 hover:bg-red-600" : isPending ? "" : ""
           }
         >
-          Update Profile
+          Tourist spot
         </NavLink>
       </li>
       <li className="lg:ml-4 p-2">

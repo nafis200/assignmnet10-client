@@ -12,6 +12,7 @@ import Home from './components/Roots/Home.jsx';
 import Authprovider from './components/provider/Authprovider.jsx';
 import Login from './components/form/Login.jsx';
 import Registration from './components/form/Registration.jsx';
+import Alltourist from './components/toursist/Alltourist.jsx';
 
 const router = createBrowserRouter([
   {
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
       {
         path:'/registration',
         element:<Registration></Registration>
+      },
+      {
+        path: '/tourist-spot',
+        element: <Alltourist></Alltourist>
       }
     ]
   },

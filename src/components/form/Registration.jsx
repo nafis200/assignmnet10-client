@@ -6,6 +6,7 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../provider/Authprovider";
+import { updateProfile } from "firebase/auth";
 const Registration = () => {
   const [showpass, setShowpass] = useState(false);
 
@@ -18,6 +19,7 @@ const Registration = () => {
     const name = data.get("name");
     const password = data.get("password");
     const image = data.get("image");
+    
     if (!name && !email && !password && !image) {
       toast.error("please fill up the form");
       return;
@@ -49,7 +51,6 @@ const Registration = () => {
    
     createUser(email,password)
     .then(result=>{
-       
         updateProfile(result.user,{
            displayName:name,
            photoURL: image
