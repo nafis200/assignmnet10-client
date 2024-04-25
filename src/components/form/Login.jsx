@@ -83,14 +83,17 @@ const Login = () => {
               <div className="form-control mt-6">
                 <button className="btn btn-primary">login</button>
               </div>
-              <div className="form-control mt-6">
-                <button onClick={handlegoogle} className="btn  font-bold bg-slate-300"> <span> <FaGoogle className='text-2xl'></FaGoogle> </span>Login with Google</button>
-              </div>
-              <div className="form-control mt-6">
-                <button onClick={handlegithub} className="btn  font-bold"> <span> <FaGithub className='text-2xl'></FaGithub> </span>Login with Github</button>
-              </div>
               <div className="flex justify-end text-blue-600 underline"> <NavLink to="/registration">Register</NavLink> </div>
             </form>
+
+            <div className=' space-y-2'>
+            <div className="form-control mt-1">
+                <button onClick={handlegoogle} className="btn  font-bold bg-slate-300 w-3/4 ml-7"> <span> <FaGoogle className='text-2xl'></FaGoogle> </span>Login with Google</button>
+              </div>
+              <div className="form-control mt-1">
+                <button onClick={handlegithub} className="btn  font-bold w-3/4 ml-7 mb-4"> <span> <FaGithub className='text-2xl'></FaGithub> </span>Login with Github</button>
+              </div>
+            </div>
             
           </div>
         </div>
