@@ -11,6 +11,7 @@ import Error from './components/error/Error.jsx';
 import Home from './components/Roots/Home.jsx';
 import Authprovider from './components/provider/Authprovider.jsx';
 import Login from './components/form/Login.jsx';
+import Registration from './components/form/Registration.jsx';
 
 const router = createBrowserRouter([
   {
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
       {
         path:'/login',
         element: <Login></Login>
+      },
+      {
+        path:'/registration',
+        element:<Registration></Registration>
       }
     ]
   },

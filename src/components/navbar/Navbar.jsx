@@ -216,7 +216,7 @@ const Navbar = () => {
                   </ul>
                 </div>
                 <div className="lg:flex md:flex hidden">
-                      <NavLink to="/register">
+                      <NavLink to="/registration">
                         <button className="btn lg:p-4 lg:mr-5 md:mr-5 md:p-4 text-white bg-green-400">
                           Register
                         </button>
