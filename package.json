@@ -18,7 +18,8 @@
     "react-router": "^6.23.0",
     "react-router-dom": "^6.23.0",
     "react-toast": "^1.0.3",
-    "react-toastify": "^10.0.5"
+    "react-toastify": "^10.0.5",
+    "react-tooltip": "^5.26.3"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",

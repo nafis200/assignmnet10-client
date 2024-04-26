@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useLoaderData } from "react-router";
 import Homedetails from "./Homedetails";
 
+
 const Home = () => {
 
   const loader = useLoaderData()

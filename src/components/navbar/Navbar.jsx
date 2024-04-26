@@ -3,6 +3,8 @@ import { NavLink, Navigate } from "react-router-dom";
 import { IoIosArrowDropdownCircle } from "react-icons/io";
 import { AuthContext } from "../provider/Authprovider";
 import { useContext } from "react";
+import "react-tooltip/dist/react-tooltip.css";
+import { Tooltip } from "react-tooltip";
 
 const Navbar = () => {
   const { users, logOut } = useContext(AuthContext);
@@ -173,10 +175,7 @@ const Navbar = () => {
                 </div>
                 <div className="lg:flex md:flex hidden ">
                   {" "}
-                  <div
-                    className=" w-10 -ml-2 rounded-full tooltip tooltip-bottom"
-                    data-tip={names}
-                  >
+                  <div className=" w-10 -ml-2 rounded-full " id="image">
                     <img
                       className=" mt-1 rounded-full -ml-5"
                       alt="Tailwind CSS Navbar component"
@@ -186,9 +185,16 @@ const Navbar = () => {
                   <button
                     onClick={handleLogout}
                     className="lg:btn md:btn p-2 lg:p-4 md:p-4 mr-20 lg:mr-4 md:mr-4 text-white bg-green-400 lg:bg-green-400 md:bg-green-400"
+                    id="logout"
                   >
                     Logout
                   </button>
+                  <Tooltip anchorSelect="#logout" clickable>
+                    <button>logout button!</button>
+                  </Tooltip>
+                  <Tooltip anchorSelect="#image" clickable>
+                    <button>{names}</button>
+                  </Tooltip>
                 </div>
               </>
             ) : (
@@ -216,19 +222,31 @@ const Navbar = () => {
                   </ul>
                 </div>
                 <div className="lg:flex md:flex hidden">
-                      <NavLink to="/registration">
-                        <button className="btn lg:p-4 lg:mr-5 md:mr-5 md:p-4 text-white bg-green-400">
-                          Register
-                        </button>
-                      </NavLink>
-                      <NavLink to="/login">
-                        <button className="btn lg:p-4 lg:mr-5 md:mr-5 md:p-4 text-white bg-blue-400">
-                          Login
-                        </button>
-                      </NavLink>
-                    </div>
-              </>
+                  <NavLink to="/registration">
+                    <button
+                      className="btn lg:p-4 lg:mr-5 md:mr-5 md:p-4 text-white bg-green-400"
+                      id="register"
+                    >
+                      Register
+                    </button>
+                    <Tooltip anchorSelect="#register" clickable>
+                      <button>register button!</button>
+                    </Tooltip>
+                  </NavLink>
+                  <NavLink to="/login">
+                    <button
+                      className="btn lg:p-4 lg:mr-5 md:mr-5 md:p-4 text-white bg-blue-400"
+                      id="clickable"
+                    >
+                      Login
+                    </button>
 
+                    <Tooltip anchorSelect="#clickable" clickable>
+                      <button>login button!</button>
+                    </Tooltip>
+                  </NavLink>
+                </div>
+              </>
             )}
           </div>
         </div>
