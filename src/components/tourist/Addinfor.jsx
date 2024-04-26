@@ -155,6 +155,7 @@ const Addinfor = () => {
             placeholder="User Email"
             className="input lg:input-lg input-bordered lg:w-[500px] md:w-[250px] w-[150px]"
             name = "User Email"
+            defaultValue={em}
             required
           />
         </div>
@@ -170,6 +171,7 @@ const Addinfor = () => {
             placeholder="user name"
             className="input lg:input-lg input-bordered lg:w-[500px] md:w-[250px] w-[150px]"
             name = "name "
+            defaultValue={Nam}
             required
           />
         </div>
