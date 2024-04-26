@@ -11,12 +11,38 @@ const Addinfor = () => {
     emails = email
   }
   const [Nam, setNam] = useState(names)
-  console.log("user",Nam);
+  
   const [em,setEm] = useState(emails)
-  console.log('emails',em);
+ 
 
   const handleform = e=>{
-     
+     e.preventDefault()
+     const form = e.target 
+     const image = form.image.value
+     const spot = form.spot_name.value
+     const country = form.country_Name.value
+     const location = form.location.value
+     const description = form.short_description.value
+     const average_cost = form.average_cost.value
+     const seasonality = form.seasonality.value
+     const Travel = form.travel_time.value
+     const totaVisitorsPerYear = form.totaVisitorsPerYear.value
+     const email = form.User_Email.value
+     const name = form.name.value 
+
+     const totalValue = {
+      image,
+      spot,
+      country,
+      location,
+      description,
+      average_cost,
+      seasonality,
+      Travel,
+      totaVisitorsPerYear,email,
+      name}
+
+      console.log(totalValue);
   }
 
   return (
@@ -97,7 +123,7 @@ const Addinfor = () => {
             <span className="label-text">average_cost</span>
           </label>
           <input
-            type="text"
+            type="number"
             placeholder="average_cost"
             className="input lg:input-lg input-bordered lg:w-[500px] md:w-[250px] w-[150px]"
             name = "average_cost"
@@ -121,7 +147,7 @@ const Addinfor = () => {
         </div>
         <div className="">
           <label className="label">
-            <span className="label-text">average_cost</span>
+            <span className="label-text">Travel time</span>
           </label>
           <input
             type="number"
@@ -140,9 +166,9 @@ const Addinfor = () => {
           </label>
           <input
             type="number"
-            placeholder="seasonality"
+            placeholder="totalvisitoePerYear"
             className="input lg:input-lg input-bordered lg:w-[500px] md:w-[250px] w-[150px]"
-            name = "totaVisitorsPerYear "
+            name = "totaVisitorsPerYear"
             required
           />
         </div>
@@ -154,7 +180,7 @@ const Addinfor = () => {
             type="email"
             placeholder="User Email"
             className="input lg:input-lg input-bordered lg:w-[500px] md:w-[250px] w-[150px]"
-            name = "User Email"
+            name = "User_Email"
             defaultValue={em}
             required
           />
@@ -170,7 +196,7 @@ const Addinfor = () => {
             type="text"
             placeholder="user name"
             className="input lg:input-lg input-bordered lg:w-[500px] md:w-[250px] w-[150px]"
-            name = "name "
+            name = "name"
             defaultValue={Nam}
             required
           />
