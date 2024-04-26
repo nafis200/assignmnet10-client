@@ -30,10 +30,13 @@ const Addinfor = () => {
      const email = form.User_Email.value
      const name = form.name.value 
 
+     const countries = country.toLowerCase()
+     
+
      const totalValue = {
       image,
       spot,
-      country,
+      countries,
       location,
       description,
       average_cost,
