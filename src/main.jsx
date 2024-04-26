@@ -14,6 +14,7 @@ import Login from './components/form/Login.jsx';
 import Registration from './components/form/Registration.jsx';
 import Alltourist from './components/toursist/Alltourist.jsx';
 import Addinfor from './components/tourist/Addinfor.jsx';
+import Privateroute from './components/private/Privateroute.jsx';
 
 const router = createBrowserRouter([
   {
@@ -40,8 +41,9 @@ const router = createBrowserRouter([
       },
       {
          path:'/add',
-         element: <Addinfor></Addinfor>,
+         element:<Privateroute><Addinfor></Addinfor></Privateroute> ,
       },
+      
       
     ]
   },
