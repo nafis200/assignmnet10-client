@@ -46,7 +46,7 @@ const Navbar = () => {
 
   const links = (
     <>
-      <li className="lg:ml-4 p-2">
+      <li className="lg:ml-4 p-2" id="home">
         <NavLink
           to="/"
           className={({ isActive, isPending }) =>
@@ -55,9 +55,12 @@ const Navbar = () => {
         >
           Home
         </NavLink>
+        <Tooltip anchorSelect="#home" clickable>
+                      <button>Home page</button>
+                    </Tooltip>
       </li>
 
-      <li className="lg:ml-4 p-2">
+      <li className="lg:ml-4 p-2" id="tourist">
         <NavLink
           to="/tourist-spot"
           className={({ isActive, isPending }) =>
@@ -66,6 +69,9 @@ const Navbar = () => {
         >
           Tourist spot
         </NavLink>
+        <Tooltip anchorSelect="#tourist" clickable>
+                      <button>All tourist page</button>
+                    </Tooltip>
       </li>
       <li className="lg:ml-4 p-2">
         <NavLink
@@ -131,9 +137,7 @@ const Navbar = () => {
                 <div>{links}</div>
               </ul>
             </div>
-            <a className="btn btn-ghost text-xl lg:text-2xl font-bold">
-              Dream houses
-            </a>
+            <a className="btn btn-ghost text-xl lg:text-2xl font-bold"> Tourism  <span className="text-orange-400">Management</span>  </a>
           </div>
           <div class="navbar-center hidden lg:flex">
             <ul class="menu menu-horizontal px-1">{links}</ul>
