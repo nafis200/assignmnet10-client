@@ -1,25 +1,29 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../provider/Authprovider";
 
 const Addinfor = () => {
   const { users } = useContext(AuthContext);
-
-  let names = "";
-  let emails = "";
+  let names = "nafis"
+  let emails = "hellow"
   if (users) {
     const { email, displayName } = users;
-    console.log(email);
-    console.log(displayName);
-    names = displayName;
-    emails = email;
+    names = displayName
+    emails = email
   }
-  console.log(names, emails);
+  const [Nam, setNam] = useState(names)
+  console.log("user",Nam);
+  const [em,setEm] = useState(emails)
+  console.log('emails',em);
+
+  const handleform = e=>{
+     
+  }
 
   return (
     <div>
       <h2 className="lg:text-2xl md:text-xl text-center font-bold">Add spot</h2>
 
-      <form className="card-body">
+      <form onSubmit={handleform} className="card-body">
         {/* 1st input */}
         <div className="lg:flex md:flex lg:gap-4 gap-2 md:gap-4 justify-center flex">
         <div className="">
@@ -156,8 +160,8 @@ const Addinfor = () => {
         </div>
         </div>
         {/* 6th input */}
-        <div className="flex md:ml-[90px]">
-        <div className="lg:ml-[125px] ml-[30px] md:ml-0">
+        <div className="md:ml-[90px]">
+        <div className="lg:ml-[125px] ml-[30px] md:ml-0 ">
           <label className="label">
             <span className="label-text">User Name </span>
           </label>
@@ -169,6 +173,9 @@ const Addinfor = () => {
             required
           />
         </div>
+        </div>
+        <div className="flex justify-center">
+        <input type="submit" className="lg:mt-4 md:mt-4 mt-2 btn btn-primary w-3/4 lg:ml-16" value="Add" />
         </div>
       </form>
     </div>
