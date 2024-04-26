@@ -13,6 +13,7 @@ import Authprovider from './components/provider/Authprovider.jsx';
 import Login from './components/form/Login.jsx';
 import Registration from './components/form/Registration.jsx';
 import Alltourist from './components/toursist/Alltourist.jsx';
+import Addinfor from './components/tourist/Addinfor.jsx';
 
 const router = createBrowserRouter([
   {
@@ -35,8 +36,13 @@ const router = createBrowserRouter([
       },
       {
         path: '/tourist-spot',
-        element: <Alltourist></Alltourist>
-      }
+        element: <Alltourist></Alltourist>,
+      },
+      {
+         path:'/add',
+         element: <Addinfor></Addinfor>,
+      },
+      
     ]
   },
 ]);

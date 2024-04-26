@@ -7,7 +7,7 @@ import "react-tooltip/dist/react-tooltip.css";
 import { Tooltip } from "react-tooltip";
 
 const Navbar = () => {
-  const { users, logOut } = useContext(AuthContext);
+  const { users,logOut} = useContext(AuthContext);
 
   let names = "unknown";
   let images = "https://i.postimg.cc/0N2Fs1LG/photo-2024-04-10-15-50-24.jpg";
@@ -73,9 +73,9 @@ const Navbar = () => {
                       <button>All tourist page</button>
                     </Tooltip>
       </li>
-      <li className="lg:ml-4 p-2">
+      <li className="lg:ml-4 p-2" id="add">
         <NavLink
-          to="/user"
+          to="/add"
           className={({ isActive, isPending }) =>
             isActive
               ? "bg-green-400 hover:bg-red-600"
@@ -84,8 +84,11 @@ const Navbar = () => {
               : ""
           }
         >
-          User Profile
+          Add tourist
         </NavLink>
+        <Tooltip anchorSelect="#add" clickable>
+                      <button>private page</button>
+                    </Tooltip>
       </li>
       <li className="lg:ml-4 p-2">
         <NavLink
