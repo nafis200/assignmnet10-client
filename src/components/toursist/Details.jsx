@@ -3,6 +3,8 @@
 import { FaDollarSign } from "react-icons/fa6";
 import { IoLocationOutline } from "react-icons/io5";
 import { TiWeatherPartlySunny } from "react-icons/ti";
+import { IoIosTime } from "react-icons/io";
+import { FaPeopleGroup } from "react-icons/fa6";
 const Details = ({card}) => {
     const {
         _id,
@@ -69,9 +71,33 @@ const Details = ({card}) => {
                 <span>
                 <TiWeatherPartlySunny className="text-3xl text-red-500"></TiWeatherPartlySunny>
                 </span>
-               <span className="text-xl text-orange-500">{seasonality}</span>
+               <span className="text-xl text-orange-500">{seasonality} season</span>
               </h2>
             </p>
+
+            <p className="flex justify-start ml-10 lg:ml-0">
+              
+              <h2 className="font-bold flex items-center gap-2">
+              
+                <span>
+                <IoIosTime className="text-3xl"></IoIosTime>
+                </span>
+               <span className="text-xl text-blue-500">{Travel} hours</span>
+              </h2>
+            </p>
+
+            <p className="flex justify-start ml-10 lg:ml-0">
+              
+              <h2 className="font-bold flex items-center gap-2">
+              
+                <span>
+                <FaPeopleGroup className="text-3xl"></FaPeopleGroup>
+                </span>
+               <span className="text-xl">
+                per year visited {totaVisitorsPerYear} people</span>
+              </h2>
+            </p>
+
           </div>
         </div>
       </section>
