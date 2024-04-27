@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import Swal from "sweetalert2";
 const Mytable = ({ data, index, items, setItems }) => {
   const {
@@ -62,7 +63,7 @@ const Mytable = ({ data, index, items, setItems }) => {
         </td>
         <td>
           {" "}
-          <button className="btn btn-warning">Update</button>{" "}
+         <NavLink to ={`/updatelist/${_id}`}><button className="btn btn-warning">Update</button></NavLink>
         </td>
       </tr>
     </tbody>

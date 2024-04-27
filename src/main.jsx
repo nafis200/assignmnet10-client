@@ -17,6 +17,7 @@ import Addinfor from './components/tourist/Addinfor.jsx';
 import Privateroute from './components/private/Privateroute.jsx';
 import Touristdetails from './components/toursist/Touristdetails.jsx';
 import Mylist1 from './components/mylist/Mylist1.jsx';
+import UpdateList from './components/mylist/UpdateList.jsx';
 
 const router = createBrowserRouter([
   {
@@ -55,6 +56,11 @@ const router = createBrowserRouter([
          path:'/mylist',
          element:<Privateroute><Mylist1></Mylist1></Privateroute>,
          loader: ()=>fetch('http://localhost:5006/item')
+      },
+      {
+        path:'/updatelist/:id',
+        element:<UpdateList></UpdateList>,
+        loader : ({params})=> fetch(`http://localhost:5006/item/${params.id}`)
       }
       
       
