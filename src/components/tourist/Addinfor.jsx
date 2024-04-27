@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { AuthContext } from "../provider/Authprovider";
-
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const Addinfor = () => {
   const { users } = useContext(AuthContext);
   let names = "nafis"
@@ -44,8 +45,18 @@ const Addinfor = () => {
       Travel,
       totaVisitorsPerYear,email,
       name}
-
+      fetch("http://localhost:5006/item", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json"
+      },
+      body: JSON.stringify(totalValue)
+    })
+      .then((res) => res.json())
+      .then((data) => console.log(data));
+      toast.success("successfully Add");
       console.log(totalValue);
+      e.target.reset()
   }
 
   return (
@@ -209,6 +220,7 @@ const Addinfor = () => {
         <input type="submit" className="lg:mt-4 md:mt-4 mt-2 btn btn-primary w-3/4 lg:ml-16" value="Add" />
         </div>
       </form>
+      <ToastContainer></ToastContainer>
     </div>
   );
 };

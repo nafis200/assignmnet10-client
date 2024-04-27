@@ -2,30 +2,28 @@ import { useState } from "react";
 import { useLoaderData } from "react-router";
 import Homedetails from "./Homedetails";
 
-
 const Home = () => {
-
-  const loader = useLoaderData()
-  const [items,setItems] = useState(loader)
+  const loader = useLoaderData();
+  const [items, setItems] = useState(loader);
   console.log(items);
-    
-    const handleAdd = event =>{
-         event.preventDefault();
-         const form = event.target 
-         const email = form.email.value 
-         console.log(email);
-         const mail = {email}
-         console.log(mail)
-         fetch('http://localhost:5006/item',{
-      method: 'POST',
-      headers:{
-         'content-type' : 'application/json'
+
+  const handleAdd = (event) => {
+    event.preventDefault();
+    const form = event.target;
+    const email = form.email.value;
+    console.log(email);
+    const mail = { email };
+    console.log(mail);
+    fetch("http://localhost:5006/item", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json"
       },
       body: JSON.stringify(mail)
     })
-    .then(res => res.json())
-    .then(data => console.log(data))
-  }
+      .then((res) => res.json())
+      .then((data) => console.log(data));
+  };
   return (
     <div>
       <div className="hero min-h-screen bg-base-200">
@@ -48,7 +46,7 @@ const Home = () => {
                   type="email"
                   placeholder="email"
                   className="input input-bordered"
-                  name ="email"
+                  name="email"
                   required
                 />
               </div>
@@ -76,11 +74,15 @@ const Home = () => {
         </div>
       </div>
       <div>
-         <h2 className="text-2xl text-center mt-5">{items.length}</h2>
-         {
-            items?.map(item => <Homedetails key={item._id} item={item} setItems={setItems} items={items}></Homedetails> )
-         }
-
+        <h2 className="text-2xl text-center mt-5">{items.length}</h2>
+        {items?.map((item) => (
+          <Homedetails
+            key={item._id}
+            item={item}
+            setItems={setItems}
+            items={items}
+          ></Homedetails>
+        ))}
       </div>
     </div>
   );

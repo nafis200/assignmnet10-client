@@ -67,7 +67,7 @@ const Navbar = () => {
             isActive ? "bg-green-400 hover:bg-red-600" : isPending ? "" : ""
           }
         >
-          Tourist spot
+         All Tourist spot
         </NavLink>
         <Tooltip anchorSelect="#tourist" clickable>
                       <button>All tourist page</button>
@@ -196,7 +196,7 @@ const Navbar = () => {
                   >
                     Logout
                   </button>
-                  <Tooltip anchorSelect="#logout" clickable>
+                  <Tooltip anchorSelect="#logou" clickable>
                     <button>logout button!</button>
                   </Tooltip>
                   <Tooltip anchorSelect="#image" clickable>
@@ -236,7 +236,7 @@ const Navbar = () => {
                     >
                       Register
                     </button>
-                    <Tooltip anchorSelect="#register" clickable>
+                    <Tooltip anchorSelect="#registe" clickable>
                       <button>register button!</button>
                     </Tooltip>
                   </NavLink>
@@ -248,7 +248,7 @@ const Navbar = () => {
                       Login
                     </button>
 
-                    <Tooltip anchorSelect="#clickable" clickable>
+                    <Tooltip anchorSelect="#clickabl" clickable>
                       <button>login button!</button>
                     </Tooltip>
                   </NavLink>

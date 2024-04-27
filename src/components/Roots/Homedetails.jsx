@@ -1,3 +1,6 @@
+
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const Homedetails = ({ item, setItems, items }) => {
   const { email, _id } = item;
   const handleDelete = (id) => {
