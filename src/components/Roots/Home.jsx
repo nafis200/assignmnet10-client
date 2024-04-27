@@ -7,13 +7,20 @@ import { useLoaderData } from "react-router";
 import Torcard from "./Torcard";
 import Count from "./Count";
 
+
 const Home = () => {
   const loader = useLoaderData();
-
   const [items, setItems] = useState(loader);
   const [light, setLight] = useState(true);
   const [typeEffect] = useTypewriter({
-    words: ["light theme", "dark theme"],
+    words: ["Tourist", "Travellar","visitor"],
+    loop: {},
+    typeSpeed: 100,
+    deleteSpeed: 50
+  });
+
+  const [typeEffect1] = useTypewriter({
+    words: ["Country", "Land","Countries"],
     loop: {},
     typeSpeed: 100,
     deleteSpeed: 50
@@ -43,7 +50,7 @@ const Home = () => {
 
       <div>
         <h1 className="lg:text-2xl md:text-2xl text-xl text-center font-bold mt-5">
-          Tourist <span className="text-orange-400"> spot section</span>{" "}
+        <span className="text-purple-400">{typeEffect}</span> <span className="text-orange-400"> spot section</span>{" "}
         </h1>
 
         <div className="mt-8 grid lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-3 lg:space-y-10 space-y-5 lg:ml-4 md:ml-[200px]">
@@ -59,8 +66,8 @@ const Home = () => {
       </div>
 
       <div>
-        <h1 className="lg:text-2xl md:text-2xl text-xl text-center font-bold lg:mt-20 mt-10">
-          Country <span className="text-orange-400">section</span>{" "}
+        <h1 className="lg:text-2xl md:text-2xl text-xl text-center font-bold lg:mt-32 mt-10">
+        <span className="text-purple-400">{typeEffect1}</span> <span className="text-orange-400">section</span>{" "}
           <div className="mt-8 grid lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-3 lg:space-y-10 space-y-5 lg:ml-4 md:ml-[200px]">
           {array.slice(0, 6).map((data) => (
             <Count
