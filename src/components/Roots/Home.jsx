@@ -79,6 +79,23 @@ const Home = () => {
         </div>
         </h1>
       </div>
+      <div className="mt-20">
+        <h1 className="lg:text-3xl md:text-2xl text-xl text-center font-bold">Plan your <span className="text-amber-400">perfect trip</span> </h1>
+
+        <p className="mt-5 text-center font-extralight">Without perfect plan you cant achieve your goal. So every work you must make a plan and work with plan</p>
+       <div className="relative">
+       <img className="mt-10 w-full lg:h-[455px] md:h-[400px] h-[450px]" src="https://i.postimg.cc/SRDPTKSh/1000-F-711375441-ZTScjn99w519ma2-EDj-Nw-Lq7o-Lu4k-Q0-A7.jpg" alt="" />
+        <div className="absolute top-[120px] lg:top-[170px] lg:left-[20px]">
+        <div>
+          <p className="text-center text-white lg:font-bold md:font-bold lg:text-2xl">when you are tried and your brain dosent want to take extra load you need refreshment.Nature is the best process to take relax  with healty <br /> way for this purpose if you neen any help plese contract our agency</p>
+        </div>
+        <div className="space-x-4 mt-4 ml-4 flex justify-center">
+          <button className="btn btn bg-primary">Contact us</button>
+          <button className="btn bg-green-400">Help Desk</button>
+        </div>
+        </div>
+       </div>
+      </div>
     </div>
   );
 };

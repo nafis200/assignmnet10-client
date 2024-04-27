@@ -17,7 +17,7 @@ const Homedetails = ({ item, setItems, items }) => {
   const updateButton = (id) => {
     console.log("hellow");
     const updateuser = { email: "nafis ahamed" };
-    fetch(`http://localhost:5006/item/${id}`, {
+    fetch(`https://module-57-2.vercel.app/item/${id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json"

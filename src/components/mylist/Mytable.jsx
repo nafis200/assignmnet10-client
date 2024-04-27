@@ -28,7 +28,7 @@ const Mytable = ({ data, index, items, setItems }) => {
     }).then((result) => {
       console.log(result);
       if (result.isConfirmed) {
-        fetch(`http://localhost:5006/item/${id}`, {
+        fetch(`https://module-57-2.vercel.app/item/${id}`, {
           method: "DELETE"
         })
           .then((res) => res.json())

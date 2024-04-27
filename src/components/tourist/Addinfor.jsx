@@ -54,7 +54,7 @@ const Addinfor = () => {
       Travel,
       totaVisitorsPerYear,email,
       name}
-      fetch("http://localhost:5006/item", {
+      fetch("https://module-57-2.vercel.app/item", {
       method: "POST",
       headers: {
         "content-type": "application/json"

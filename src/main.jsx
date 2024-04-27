@@ -29,7 +29,7 @@ const router = createBrowserRouter([
       {
         path:'/',
         element:<Home></Home>,
-        loader: ()=>fetch('http://localhost:5006/item')
+        loader: ()=>fetch('https://module-57-2.vercel.app/item')
       },
       {
         path:'/login',
@@ -42,7 +42,7 @@ const router = createBrowserRouter([
       {
         path: '/tourist-spot',
         element: <Alltourist></Alltourist>,
-        loader: ()=>fetch('http://localhost:5006/item')
+        loader: ()=>fetch('https://module-57-2.vercel.app/item')
       },
       {
          path:'/add',
@@ -51,22 +51,22 @@ const router = createBrowserRouter([
       {
          path:`/item/:id`,
          element: <Privateroute><Touristdetails></Touristdetails></Privateroute>,
-         loader: ()=>fetch('http://localhost:5006/item')
+         loader: ()=>fetch('https://module-57-2.vercel.app/item')
       },
       {
          path:'/mylist',
          element:<Privateroute><Mylist1></Mylist1></Privateroute>,
-         loader: ()=>fetch('http://localhost:5006/item')
+         loader: ()=>fetch('https://module-57-2.vercel.app/item')
       },
       {
         path:'/updatelist/:id',
         element:<Privateroute><UpdateList></UpdateList></Privateroute> ,
-        loader : ({params})=> fetch(`http://localhost:5006/item/${params.id}`)
+        loader : ({params})=> fetch(`https://module-57-2.vercel.app/item/${params.id}`)
       },
       {
          path:'/country/:id',
          element:<Country></Country>,
-         loader: ()=>fetch('http://localhost:5006/item')
+         loader: ()=>fetch('https://module-57-2.vercel.app/item')
         
       }
       

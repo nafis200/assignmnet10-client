@@ -41,7 +41,7 @@ const UpdateList = () => {
     };
     e.target.reset();
     console.log(totalValue);
-    fetch(`http://localhost:5006/item/${id}`, {
+    fetch(`https://module-57-2.vercel.app/item/${id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json"
