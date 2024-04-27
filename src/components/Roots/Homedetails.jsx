@@ -31,7 +31,7 @@ const Homedetails = ({ item, setItems, items }) => {
           alert("user updated successfully");
         }
 
-        //  location.reload()
+         location.reload()
 
            
 
