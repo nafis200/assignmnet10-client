@@ -2,6 +2,7 @@
 
 import { FaDollarSign } from "react-icons/fa6";
 import { IoLocationOutline } from "react-icons/io5";
+import { TiWeatherPartlySunny } from "react-icons/ti";
 const Details = ({card}) => {
     const {
         _id,
@@ -66,9 +67,9 @@ const Details = ({card}) => {
               <h2 className="font-bold flex items-center gap-2">
               
                 <span>
-                
+                <TiWeatherPartlySunny className="text-3xl text-red-500"></TiWeatherPartlySunny>
                 </span>
-               
+               <span className="text-xl text-orange-500">{seasonality}</span>
               </h2>
             </p>
           </div>
