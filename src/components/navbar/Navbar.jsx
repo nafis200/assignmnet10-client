@@ -90,9 +90,9 @@ const Navbar = () => {
                       <button>private page</button>
                     </Tooltip>
       </li>
-      <li className="lg:ml-4 p-2">
+      <li className="lg:ml-4 p-2" id="mylist">
         <NavLink
-          to="/office"
+          to="/mylist"
           className={({ isActive, isPending }) =>
             isActive
               ? "bg-green-400 hover:bg-red-600"
@@ -101,8 +101,11 @@ const Navbar = () => {
               : ""
           }
         >
-          office
+          Mylist
         </NavLink>
+        <Tooltip anchorSelect="#mylist" clickable>
+                      <button>private page</button>
+                    </Tooltip>
       </li>
     </>
   );
