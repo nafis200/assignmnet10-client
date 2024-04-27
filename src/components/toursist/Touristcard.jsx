@@ -1,3 +1,8 @@
+import { FaDollarSign } from "react-icons/fa6";
+import { FaHouse } from "react-icons/fa6";
+import { FaPeopleGroup } from "react-icons/fa6";
+import { IoIosTime } from "react-icons/io";
+import { TiWeatherPartlySunny } from "react-icons/ti";
 const Touristcard = ({ data }) => {
   const {
     image,
@@ -22,7 +27,14 @@ const Touristcard = ({ data }) => {
         />
       </figure>
       <div className="card-body">
-      <h2 className="card-title mt-9"><span className='flex mb-7 lg:mb-7 md:mb-7'></span> {spot}</h2>
+      <h2 className="card-title mt-9"><span className='flex mb-7 lg:mb-7 md:mb-7'></span> <span className="font-extralight">spot Name:</span> {spot}</h2>
+      <h2 className='font-bold flex items-center gap-2'> <span> <FaDollarSign></FaDollarSign> </span> average_cost <span className='text-red-500'>{average_cost}</span> </h2>
+      <h2 className='font-bold flex items-center gap-2'> <span className="flex items-center gap-2"> <FaPeopleGroup className="text-xl"></FaPeopleGroup> <span className="text-orange-400">total visit</span>  </span> {totaVisitorsPerYear} per year</h2>
+
+      <h2 className='font-bold flex items-center gap-2'> <span className="flex items-center gap-2"> <IoIosTime className="text-xl"></IoIosTime> <span className="text-purple-400">travel time</span>  </span> {Travel} Hours</h2>
+
+      <h2 className='font-bold flex items-center gap-2'> <span className="flex items-center gap-2"> <TiWeatherPartlySunny  className="text-xl"></TiWeatherPartlySunny > <span className="text-purple-400">Seasonlity</span>  </span> {seasonality}</h2>
+      
       </div>
       
     </div>
