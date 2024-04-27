@@ -1,24 +1,51 @@
+import Swal from "sweetalert2";
+const Mytable = ({ data, index, items, setItems }) => {
+  const {
+    _id,
+    image,
+    spot,
+    countries,
+    location,
+    description,
+    average_cost,
+    seasonality,
+    Travel,
+    totaVisitorsPerYear,
+    email,
+    name
+  } = data;
+  const handleDelete = (id) => {
+    console.log(id);
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!"
+    }).then((result) => {
+      console.log(result);
+      if (result.isConfirmed) {
+        fetch(`http://localhost:5006/item/${id}`, {
+          method: "DELETE"
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            const reamining = items.filter((it) => it._id !== id);
+            console.log(reamining);
+            setItems(reamining);
+          });
 
+        Swal.fire({
+          title: "Deleted!",
+          text: "Your file has been deleted.",
+          icon: "success"
+        });
+      }
+    });
+  };
 
-const Mytable = ({data,index,items,setItems}) => {
- 
-    const {
-        _id,
-        image,
-        spot,
-        countries,
-        location,
-        description,
-        average_cost,
-        seasonality,
-        Travel,
-        totaVisitorsPerYear,
-        email,
-        name
-      } = data  
- const handleDelete = id =>{
-     console.log(id);
- }
   return (
     <tbody>
       <tr>
@@ -27,9 +54,16 @@ const Mytable = ({data,index,items,setItems}) => {
         <td>{countries}</td>
         <td>{location}</td>
         <td>{average_cost}</td>
-        <td> <button onClick={()=>handleDelete(_id)} className="btn btn-warning">X</button> </td>
-        <td> <button className="btn btn-warning">Update</button> </td>
-        >
+        <td>
+          {" "}
+          <button onClick={() => handleDelete(_id)} className="btn btn-warning">
+            X
+          </button>{" "}
+        </td>
+        <td>
+          {" "}
+          <button className="btn btn-warning">Update</button>{" "}
+        </td>
       </tr>
     </tbody>
   );
