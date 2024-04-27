@@ -1,4 +1,5 @@
 import { useLoaderData, useParams } from "react-router";
+import Details from "./Details";
 
 
 const Touristdetails = () => {
@@ -11,7 +12,9 @@ const Touristdetails = () => {
     
     return (
         <div>
-            
+           {
+            cards.map(card => <Details key={card._id} card = {card}></Details> )
+           } 
         </div>
     );
 };
