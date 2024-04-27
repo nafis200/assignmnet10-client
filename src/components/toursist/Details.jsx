@@ -1,6 +1,7 @@
 
 
 import { FaDollarSign } from "react-icons/fa6";
+import { IoLocationOutline } from "react-icons/io5";
 const Details = ({card}) => {
     const {
         _id,
@@ -45,21 +46,19 @@ const Details = ({card}) => {
           <hr />
           <p>
             <span className="lg:text-2xl grid grid-cols-1 lg:ml-0 ml-10 lg:text-3xl md:text-2xl">
-              
+              {description}
             </span>
           </p>
-          
-
+          <hr />
           <div className=" space-y-3">
             <p className="mt-5 flex justify-start ml-10 lg:ml-0">
              
               <h2 className="font-bold flex items-center gap-2">
                
                 <span>
-                 
-                 
+                <IoLocationOutline className="text-3xl"></IoLocationOutline>
                 </span>
-          
+                {location}
               </h2>
             </p>
             <p className="flex justify-start ml-10 lg:ml-0">
