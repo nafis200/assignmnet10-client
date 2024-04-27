@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../provider/Authprovider";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { Typewriter,Cursor, useTypewriter } from 'react-simple-typewriter'
 const Addinfor = () => {
   const { users } = useContext(AuthContext);
   let names = "nafis"
@@ -14,6 +15,14 @@ const Addinfor = () => {
   const [Nam, setNam] = useState(names)
   
   const [em,setEm] = useState(emails)
+
+  const [typeEffect] = useTypewriter({
+     words : ['spot', 'tourist-spot', 
+     'picnic spot', 'visiting spot'],
+     loop:{},
+     typeSpeed:100,
+     deleteSpeed:50
+  })
  
 
   const handleform = e=>{
@@ -61,7 +70,7 @@ const Addinfor = () => {
 
   return (
     <div>
-      <h2 className="lg:text-2xl md:text-xl text-center font-bold">Add spot</h2>
+      <h2 className="lg:text-2xl md:text-xl text-center font-bold">Add  <span className="text-purple-400">{typeEffect}</span>  </h2>
 
       <form onSubmit={handleform} className="card-body">
         {/* 1st input */}

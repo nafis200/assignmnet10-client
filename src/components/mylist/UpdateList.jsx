@@ -2,7 +2,15 @@ import { useParams } from "react-router";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Swal from "sweetalert2";
+import { Typewriter,Cursor, useTypewriter } from 'react-simple-typewriter'
 const UpdateList = () => {
+  const [typeEffect] = useTypewriter({
+    words : ['spot', 'tourist-spot', 
+    'picnic spot', 'visiting spot'],
+    loop:{},
+    typeSpeed:100,
+    deleteSpeed:50
+ })    
   const { id } = useParams();
   console.log(id);
   const handleform = (e) => {
@@ -54,7 +62,7 @@ const UpdateList = () => {
   return (
     <div>
       <h2 className="lg:text-2xl md:text-xl text-center font-bold">
-        Update spot
+        Update <span className="text-purple-400">{typeEffect}</span>
       </h2>
       <form onSubmit={handleform} className="card-body">
         {/* 1st input */}

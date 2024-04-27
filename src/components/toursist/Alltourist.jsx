@@ -3,12 +3,18 @@ import { useState } from "react";
 import { IoIosArrowDropdown } from "react-icons/io";
 import { useLoaderData } from "react-router";
 import Touristcard from "./Touristcard";
-
+import { Typewriter,Cursor, useTypewriter } from 'react-simple-typewriter'
 
 const Alltourist = () => {
     const loader = useLoaderData();
     const [items, setItems] = useState(loader);
-    
+    const [typeEffect] = useTypewriter({
+      words : ['spot', 'tourist-spot', 
+      'picnic spot', 'visiting spot'],
+      loop:{},
+      typeSpeed:100,
+      deleteSpeed:50
+   })    
 
     const Sortfunction = (check) =>{
         let datacard = [...items]
@@ -22,7 +28,8 @@ const Alltourist = () => {
         <div>
              <section className="container mx-auto flex justify-center">
         <div className="dropdown dropdown-bottom ">
-          <div tabIndex={0} role="button" className="btn m-1 bg-green-400 text-center lg:w-[100px] p-2 text-white">
+          <h1 className="mt-3 font-bold text-xl">All <span className="text-purple-400">{typeEffect}</span></h1>
+          <div tabIndex={0} role="button" className="btn m-1 bg-green-400 text-center lg:w-[100px] p-2 text-white mt-5">
             <span className=" flex items-center gap-2">Sort By <IoIosArrowDropdown className="lg:text-2xl"></IoIosArrowDropdown> </span>
           </div>
           <ul
