@@ -3,24 +3,25 @@ import { FaPeopleGroup } from "react-icons/fa6";
 import { IoIosTime } from "react-icons/io";
 import { TiWeatherPartlySunny } from "react-icons/ti";
 import { NavLink } from "react-router-dom";
-const Touristcard = ({ data,index }) => {
-  const {
-    _id,
-    image,
-    spot,
-    countries,
-    location,
-    description,
-    average_cost,
-    seasonality,
-    Travel,
-    totaVisitorsPerYear,
-    email,
-    name
-  } = data;
-  return (
-    <div className={index === 0 && 'mt-16'}>
-      <div className="card lg:w-96 md:w-96 w-72 bg-base-100 shadow-xl ml-7">
+
+const Torcard = ({data,index}) => {
+    const {
+        _id,
+        image,
+        spot,
+        countries,
+        location,
+        description,
+        average_cost,
+        seasonality,
+        Travel,
+        totaVisitorsPerYear,
+        email,
+        name
+      } = data;
+    return (
+        <div className={index === 0 && 'mt-9'}>
+            <div className="card lg:w-96 md:w-96 w-72 bg-base-100 shadow-xl ml-7">
       <figure>
         <img
           className="w-[300px] lg:w-full md:w-full"
@@ -42,8 +43,8 @@ const Touristcard = ({ data,index }) => {
       </div>
       
     </div>
-    </div>
-  );
+        </div>
+    );
 };
 
-export default Touristcard;
+export default Torcard;
