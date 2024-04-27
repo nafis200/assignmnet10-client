@@ -1,4 +1,5 @@
 import { useLoaderData, useParams } from "react-router";
+import Countrydet from "./Countrydet";
 
 
 
@@ -14,8 +15,10 @@ const Country = () => {
     console.log(country);
     
     return (
-        <div>
-            
+        <div className="grid lg:grid-cols-3 grid-cols-1">
+            {
+                country.map(data => <Countrydet  data={data}></Countrydet> )
+            }
         </div>
     );
 };
