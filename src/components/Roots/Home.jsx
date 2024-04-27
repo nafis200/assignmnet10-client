@@ -36,11 +36,11 @@ const Home = () => {
        </div>
 
        <div>
-        <h1 className="lg:text-2xl md:text-2xl text-xl text-center font-bold mt-5">Tourist spot section</h1>
+        <h1 className="lg:text-2xl md:text-2xl text-xl text-center font-bold mt-5">Tourist <span className="text-orange-400"> spot section</span> </h1>
 
         <div className="mt-8 grid lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-3 lg:space-y-10 space-y-5 lg:ml-4 md:ml-[200px]" >
             {
-                items.slice(0,6).map((data,index)=> <Torcard key={data._id} data={data} index={index}></Torcard> )
+                items.slice(0,6).map((data,index)=> <Torcard key={data._id} data={data} light={light} index={index}></Torcard> )
             }
         </div>
 
