@@ -21,7 +21,7 @@ const Count = ({data}) => {
         name
       } = data;
     return (
-        <NavLink to ="/login">
+        <NavLink to = {`/country/${_id}`}>
             <div className="card lg:w-96 md:w-96 w-72 bg-base-100 shadow-xl ml-7">
       <figure>
         <img

@@ -23,7 +23,7 @@ const Home = () => {
     (obj, index, self) =>
       index === self.findIndex((t) => t.countries === obj.countries)
   );
-  console.log("array", array);
+ 
 
   return (
     <div className={light ? "bg-white " : "bg-black text-white"}>

@@ -18,6 +18,7 @@ import Privateroute from './components/private/Privateroute.jsx';
 import Touristdetails from './components/toursist/Touristdetails.jsx';
 import Mylist1 from './components/mylist/Mylist1.jsx';
 import UpdateList from './components/mylist/UpdateList.jsx';
+import Country from './components/Roots/Country.jsx';
 
 const router = createBrowserRouter([
   {
@@ -59,9 +60,16 @@ const router = createBrowserRouter([
       },
       {
         path:'/updatelist/:id',
-        element:<UpdateList></UpdateList>,
+        element:<Privateroute><UpdateList></UpdateList></Privateroute> ,
         loader : ({params})=> fetch(`http://localhost:5006/item/${params.id}`)
+      },
+      {
+         path:'/country/:id',
+         element:<Country></Country>,
+         loader: ()=>fetch('http://localhost:5006/item')
+        
       }
+      
       
       
     ]
