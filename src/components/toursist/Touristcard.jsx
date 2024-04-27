@@ -1,10 +1,11 @@
 import { FaDollarSign } from "react-icons/fa6";
-import { FaHouse } from "react-icons/fa6";
 import { FaPeopleGroup } from "react-icons/fa6";
 import { IoIosTime } from "react-icons/io";
 import { TiWeatherPartlySunny } from "react-icons/ti";
+import { NavLink } from "react-router-dom";
 const Touristcard = ({ data }) => {
   const {
+    _id,
     image,
     spot,
     countries,
@@ -34,7 +35,9 @@ const Touristcard = ({ data }) => {
       <h2 className='font-bold flex items-center gap-2'> <span className="flex items-center gap-2"> <IoIosTime className="text-xl"></IoIosTime> <span className="text-purple-400">travel time</span>  </span> {Travel} Hours</h2>
 
       <h2 className='font-bold flex items-center gap-2'> <span className="flex items-center gap-2"> <TiWeatherPartlySunny  className="text-xl"></TiWeatherPartlySunny > <span className="text-purple-400">Seasonlity</span>  </span> {seasonality}</h2>
-      
+      <div className="card-actions mt-2">
+      <NavLink to={`/item/${_id}`}> <button className='btn btn-primary'>View details</button> </NavLink>
+    </div>
       </div>
       
     </div>

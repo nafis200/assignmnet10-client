@@ -15,6 +15,7 @@ import Registration from './components/form/Registration.jsx';
 import Alltourist from './components/toursist/Alltourist.jsx';
 import Addinfor from './components/tourist/Addinfor.jsx';
 import Privateroute from './components/private/Privateroute.jsx';
+import Touristdetails from './components/toursist/Touristdetails.jsx';
 
 const router = createBrowserRouter([
   {
@@ -44,6 +45,11 @@ const router = createBrowserRouter([
          path:'/add',
          element:<Privateroute><Addinfor></Addinfor></Privateroute> ,
       },
+      {
+         path:`/item/:id`,
+         element: <Touristdetails></Touristdetails>,
+         loader: ()=>fetch('http://localhost:5006/item')
+      }
       
       
     ]
