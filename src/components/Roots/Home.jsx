@@ -6,6 +6,7 @@ import Swipper from "./Swipper";
 import { useLoaderData } from "react-router";
 import Torcard from "./Torcard";
 import Count from "./Count";
+import Excard from "./Excard";
 
 
 const Home = () => {
@@ -99,7 +100,13 @@ const Home = () => {
         </div>
         </div>
        </div>
+      </div> 
+
+      <div>
+        <Excard></Excard>
       </div>
+
+
     </div>
   );
 };
