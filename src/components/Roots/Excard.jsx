@@ -9,6 +9,7 @@ const Excard = () => {
             "id" : 1,
             "image": "https://i.postimg.cc/SNvw9VgN/aircraft-jet-landing-cloud-46148.jpg",
             "name" : "fly emiratrs",
+            "available": "avalilable",
             "cost" : 1500,
             "button": "purchase now"
          },
@@ -16,6 +17,7 @@ const Excard = () => {
             "id" : 2,
             "image": "https://i.postimg.cc/R0c8jm4N/istockphoto-1502960058-2048x2048.jpg",
             "name" : "private car",
+            "available": "avalilable",
             "cost" : 2000,
             "button": "Booking now"
          },
@@ -23,6 +25,7 @@ const Excard = () => {
             "id" : 3,
             "image": "https://i.postimg.cc/1tsTSd3M/LT-471-LTZ-1471-Arriva-London-New-Routemaster-19522859218.jpg",
             "name" : "Shohag paribahan",
+            "available": "avalilable",
             "cost" : 700,
             "button": "purchase now"
          },
@@ -30,6 +33,7 @@ const Excard = () => {
             "id" : 4,
             "image": "https://i.postimg.cc/854YzbFG/pexels-photo-813011.jpg",
             "name" : "COSCO shipping",
+            "available": "avalilable",
             "cost" : 700,
             "button": "Booking now"
          },
@@ -37,6 +41,7 @@ const Excard = () => {
             "id" : 5,
             "image": "https://i.postimg.cc/KvwHjjY1/photo-2024-04-08-22-28-31.jpg",
             "name" : "Hotel nature",
+            "available": "avalilable",
             "cost" : 1000,
             "button": "Booking now"
          },
@@ -44,6 +49,7 @@ const Excard = () => {
             "id" : 6,
             "image": "https://i.postimg.cc/2SWXZYq2/photo-2024-04-08-22-34-59.jpg",
             "name" : "Hotel Occean",
+            "available": "avalilable",
             "cost" : 1200,
             "button": "Booking now"
          },
