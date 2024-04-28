@@ -89,7 +89,7 @@ const Home = () => {
       <div className="mt-20">
         <h1 className="lg:text-3xl md:text-2xl text-xl text-center font-bold">Plan your <span className="text-amber-400">perfect trip</span> </h1>
 
-        <p className="mt-5 text-center font-extralight">Without perfect plan you cant achieve your goal. So every work you must make a plan and work with plan</p>
+        <Slide direction={'left'}><p className="mt-5 text-center font-extralight">Without perfect plan you cant achieve your goal. So every work you must make a plan and work with plan</p></Slide>
        <div className="relative">
        <img className="mt-10 w-full lg:h-[455px] md:h-[400px] h-[450px]" src="https://i.postimg.cc/SRDPTKSh/1000-F-711375441-ZTScjn99w519ma2-EDj-Nw-Lq7o-Lu4k-Q0-A7.jpg" alt="" />
         <div className="absolute top-[120px] lg:top-[170px] lg:left-[20px]">

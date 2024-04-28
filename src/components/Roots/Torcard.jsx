@@ -25,11 +25,11 @@ const Torcard = ({data,index,light}) => {
         <div className="">
             <div className="card lg:w-96 md:w-96 w-72 bg-base-100 shadow-xl ml-7">
       <figure>
-        <img
+        <Slide direction={'down'}><img
           className="w-[300px] lg:w-full md:w-full"
           src={image}
           alt="Shoes"
-        />
+        /></Slide>
       </figure>
       <div className="card-body">
       <Slide direction={'left'}><h2 className="card-title mt-9"><span className='flex mb-7 lg:mb-7 md:mb-7'></span> <span className="font-extralight text-gray-400">spot Name:</span> <span className="text-purple-400">{spot} </span> </h2></Slide>
