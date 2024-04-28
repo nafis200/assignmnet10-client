@@ -1,7 +1,7 @@
 # Torusim management
 
 
-- [@vitejs/plugin-react](https://assignment-9-a47d2.web.app/) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@https://assignment-9-a47d2.web.app/](https://assignment-9-a47d2.web.app/) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
 
