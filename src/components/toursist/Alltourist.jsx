@@ -15,7 +15,7 @@ const Alltourist = () => {
       typeSpeed:100,
       deleteSpeed:50
    })    
-// 
+
     const Sortfunction = (check) =>{
         let datacard = [...items]
         if(check === "des"){

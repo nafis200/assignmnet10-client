@@ -7,7 +7,7 @@ import { useLoaderData } from "react-router";
 import Torcard from "./Torcard";
 import Count from "./Count";
 import Excard from "./Excard";
-
+import { Slide } from 'react-awesome-reveal'
 
 const Home = () => {
   const loader = useLoaderData();
@@ -53,9 +53,11 @@ const Home = () => {
         <h1 className="lg:text-2xl md:text-2xl text-xl text-center font-bold mt-5">
         <span className="text-purple-400">{typeEffect}</span> <span className="text-orange-400"> spot section</span>{" "}
         </h1>
+        <Slide direction={'left'}>
         <p className="text-center font-bold mt-5 lg:text-2xl mb-5 md:text-xl">For a traveller lover we are showing some better place in the world which you really refresh you.
         this place your country or your country outside
         </p>
+        </Slide>
 
         <div className="mt-8 grid lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-3 lg:space-y-10 space-y-5 lg:ml-4 md:ml-[200px]">
           {items.slice(0, 6).map((data, index) => (
@@ -72,7 +74,7 @@ const Home = () => {
       <div>
         <h1 className="lg:text-2xl md:text-2xl text-xl text-center font-bold lg:mt-32 mt-10">
         <span className="text-purple-400">{typeEffect1}</span> <span className="text-orange-400">section</span>{" "}
-         <p className="text-center mt-5 mb-5">Here you will see the best place of different countries.when you click it, it will show you these countries beautiful place which different people choose</p>
+         <Slide direction={'right'}><p className="text-center mt-5 mb-5">Here you will see the best place of different countries.when you click it, it will show you these countries beautiful place which different people choose</p></Slide>
           <div className="mt-8 grid lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-3 lg:space-y-10 space-y-5 lg:ml-4 md:ml-[200px]">
           {array.slice(0, 6).map((data) => (
             <Count
